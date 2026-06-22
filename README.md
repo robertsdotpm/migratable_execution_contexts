@@ -53,7 +53,7 @@ PEP's *Open Issues* for the honest remaining work (chiefly: the full
    Python: does the allocation-vs-execution coupling block you too, and would
    this hook help? A second independent consumer is what this most needs.
 
-Discussion thread: **&lt;add the discuss.python.org link&gt;**.
+Discussion thread: <https://discuss.python.org/t/migratable-execution-contexts-for-free-threading-a-tiny-allocation-home-hook-pre-pep-seeking-feedback-a-sponsor/107860>
 
 ## License
 
