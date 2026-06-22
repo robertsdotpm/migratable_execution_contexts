@@ -57,7 +57,7 @@ and self-correct). Off by default it's byte-identical to stock CPython.
 - **Patch:** ~50 lines against 3.13t across `obmalloc.c` +
   `pycore_object_alloc.h` + `pycore_tstate.h`. Off → byte-identical; the off
   build passes 593 stdlib tests.
-- **Real consumer:** a Go-style M:N stackful-coroutine runtime migrates parked
+- **Real consumer:** my Go-style M:N stackful-coroutine runtime migrates parked
   fibers across workers with it; a channel-churn stress that crashed in
   `_mi_page_retire` without the borrow passes **24/24** with it (8/8 abort
   without).
@@ -107,3 +107,5 @@ Full draft PEP, the patch, and reproducible validation (build recipes + an
 allocation A/B microbenchmark + a TSan control):
 <https://github.com/robertsdotpm/migratable_execution_contexts>. Happy to walk
 through any part of the soundness argument or the validation in detail.
+Releasing my M:N stackful runtime soon too but thought I'd float this discussion
+first.
